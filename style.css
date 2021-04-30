@@ -80,6 +80,9 @@
     justify-content: space-between;
     font-size: 22px;
 }
+.high:after, .low:after {
+    content: "\00b0";
+}
 .high {
     color: rgb(209,70,69);
 }
