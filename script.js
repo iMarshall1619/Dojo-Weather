@@ -1,18 +1,15 @@
 var cookAlert = document.getElementById('cookAlert');
-var tempsF = document.querySelectorAll('temps');
-var tempsC = document.querySelectorAll('temps');
+const rectify = {
+    "f" : c => (9/5 * c + 32).toPrecision(2),
+    "c" : f => (5/9 * (f - 32)).toPrecision(3)
+}
 
 function goodBye() {
     cookAlert.remove();
 }
 
-function toFahr(element) {
-    console.log(element);
-
-
-}
-
-function GetSelectedTextValue(temp) {
-    var selectedText = temp.options[temp.selectedIndex].innerHTML;
-    console.log()
+function tempChange(type) {
+    for(let temp of document.querySelectorAll(".high,.low")){
+        temp.innerHTML = rectify[type](parseFloat(temp.innerHTML + '&#176;'))
+    }
 }

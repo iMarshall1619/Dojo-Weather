@@ -20,9 +20,9 @@
         <h1>San Jose</h1>
         <div class="sanJ1">
             <h3>show temperature in </h3>
-            <select name="show temperature in" id="temp" onchange="GetSelectedTextValue(this)">
-                <option value="1">&#8451;</option>
-                <option value="2">&#8457;</option>
+            <select name="show temperature in" id="temp" onchange="tempChange(this.value)">
+                <option value="c">&#8451;</option>
+                <option value="f">&#8457;</option>
             </select>
         </div>
     </div>
